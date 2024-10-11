@@ -1,14 +1,15 @@
-# Nerfies
+# Exploring Concept Depth: How Large Language Models Acquire Knowledge at Different Layers?
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This is the repository that contains source code for the [Explore Concept Depth](https://luckfort.github.io/explore_CD).
 
-If you find Nerfies useful for your work please cite:
+
+Please cite our work:
 ```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+@article{jin2024exploring,
+  title={Exploring Concept Depth: How Large Language Models Acquire Knowledge at Different Layers?},
+  author={Jin, Mingyu and Yu, Qinkai and Huang, Jingyuan and Zeng, Qingcheng and Wang, Zhenting and Hua, Wenyue and Zhao, Haiyan and Mei, Kai and Meng, Yanda and Ding, Kaize and others},
+  journal={arXiv preprint arXiv:2404.07066},
+  year={2024}
 }
 ```
 
