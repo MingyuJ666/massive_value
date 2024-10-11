@@ -248,6 +248,94 @@
 
 
   <!--Main Body-->
+
+  <!-- Dataset Intro -->
+    
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">🗃️Dataset Information</h2>
+      
+      <div class="content has-text-justified">
+        <p>
+          To ascertain the learning difficulty of each dataset, we have utilized the 
+          <a href="https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct">
+            <span>LlaMA3-8B-Instruct</span>.
+          </a>
+          model. 
+          Our approach involves testing each sample in the datasets as a binary classification problem via a prompting way. 
+        </p>
+        <p>
+          The model generates a response for each sample, from which we infer a judgment, categorizing it as either "Yes" or "No". 
+          By comparing these judgments with the actual labels, we compute the accuracy for each dataset.
+        </p>
+        
+      </div>
+    </div>
+  </div>
+  <!--/ Dataset Intro -->
+
+
+  <!-- Case Example -->
+    
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">👀Case Examples</h2>
+      
+      <div class="content has-text-justified">
+        <h4 class="title is-4" align="center">Fact: Cities</h4>
+
+        <p>
+          ✅ Judge the statement is True or False.
+          <font color="#0000FF">
+            The city of Tokyo is in Japan.
+          </font>
+        </p>
+        <p>
+          ❌ Judge the statement is True or False.
+          <font color="#0000FF">
+            The city of Lodz is in the Dominican Republic.
+          </font> 
+        </p>
+
+        <h4 class="title is-4" align="center">Emotional: HateEval</h4>
+
+        <p>
+          ✅
+          <font color="#0000FF">
+            Here it is not about Refugees or Illegal immigrants. It is about whether one has documents before 1971 or not. Now, it is difficult for slum people and beggars to show valid documents, except the name in voter list. 
+          </font>
+          According to the comment, tell whether they present hate speech or not.
+        </p>
+        <p>
+          ❌
+          <font color="#0000FF">
+           Labor migrants transfer almost $10 billion a year to Ukraine.
+          </font> According to the comment, tell whether they present hate speech or not.
+        </p>
+
+        <h4 class="title is-4" align="center">Reasoning: Coin-Flip</h4>
+
+        <p>
+          ✅
+          <font color="#0000FF">
+            A coin is heads up. Whitney flips the coin. Erika does not flip the coin. Tj does not flip the coin. Benito flips the coin. Is the coin still heads up? Note that "flip" here means "reverse".
+          </font>
+          According to the flipping process above, determine if a coin remains heads up after it is either flipped or left unflipped by individuals. Therefore, the answer (Yes or No) is?
+        </p>
+        <p>
+          ❌
+          <font color="#0000FF">
+            A coin is heads up. Lucky does not flip the coin. Mireya flips the coin. Jj flips the coin. Kc flips the coin. Is the coin still heads up? Note that "flip" here means "reverse".
+          </font>
+          According to the flipping process above, determine if a coin remains heads up after it is either flipped or left unflipped by individuals. Therefore, the answer (Yes or No) is?
+        </p>
+
+        
+      </div>
+    </div>
+  </div>
+  <!--/ Case Example -->
+
   <!-- Anchor. -->
     
   <div class="columns is-centered has-text-centered">
@@ -286,6 +374,47 @@
     </div>
   </div>
   <!--/ Anchor. -->
+
+
+  <!-- Experiment. -->
+    
+  <div class="columns is-centered has-text-centered">
+    <div class="column is-four-fifths">
+      <h2 class="title is-3">📊Experiments</h2>
+
+      <div class="image-body">
+        <div align=center>
+          <img src="./static/images/Anchor.png" alt="CD Introduction" style="width: 30%;">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-three-fifths">
+              <h2 class="subtitle has-text-centered">
+                这里贴实验结果图
+                The dataset with the highest accuracy, <span class="dnerf">IMDb</span>, is deemed the easiest dataset to classify. Conversely, the dataset with the lowest accuracy, <span class="dnerf">Coin-Flip</span>, is considered the most difficult to classify.
+              </h2>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+      <div class="content has-text-justified">
+        <p>
+          To ascertain the learning difficulty of each dataset, we have utilized the 
+          <a href="https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct">
+            <span>LlaMA3-8B-Instruct</span>.
+          </a>
+          model. 
+          Our approach involves testing each sample in the datasets as a binary classification problem via a prompting way. 
+        </p>
+        <p>
+          The model generates a response for each sample, from which we infer a judgment, categorizing it as either "Yes" or "No". 
+          By comparing these judgments with the actual labels, we compute the accuracy for each dataset.
+        </p>
+        
+      </div>
+    </div>
+  </div>
+  <!--/ Experiment. -->
 </section>
 
 
