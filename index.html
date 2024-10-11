@@ -400,6 +400,17 @@
   <div class="columns is-centered has-text-centered">
     <div class="column is-four-fifths">
       <h2 class="title is-3">📊Experiments</h2>
+      
+      <div class="content has-text-justified">
+        <p><b>RQ1: Do different LLMs' Concept Depths behave consistently in the same dataset?</b></p>
+    
+        <p>We categorize the performances into three types.
+          1) For Cities, STSA, IMDb, and Sarcasm, the LLMs suddenly understand the tasks at intermediate layers. 
+          2) For CommonClaim and HateEval, the LLMs have already understood the tasks in shallower layers. 
+          3) For Counterfact, StrategyQA, and Coinflip, The tasks are more difficult to understand compared with others. Therefore, we consider the tasks in type 1 and 2 easy tasks, and those in type 3 are complex. 
+        </p>
+        
+      </div>
 
         <div class="image-body">
           <div align=center>
@@ -415,6 +426,16 @@
         </div>
 
   <br /> <br />
+  
+  <div class="content has-text-justified">
+        
+    <p><b>RQ2: Do different size LLMs in the same family <i>(e.g., the LLaMA family)</i> have consistent Concept Depth?</b></p>
+
+    <p>
+      We have two observations by comparing different sizes of models from the same LLM family. 1) As the number of parameters increases, peak accuracy gradually increases, and the converging point gradually advances. 2) Larger models grasp the concepts earlier and better.
+    </p>
+    
+  </div>
       
   <div class="image-body">
     <div align=center>
@@ -447,25 +468,32 @@
   <br /> <br />
       
       <div class="content has-text-justified">
-        <p><b>RQ1: Do different LLMs' Concept Depths behave consistently in the same dataset?</b></p>
 
-        <p>We categorize the performances into three types.
-          1) For Cities, STSA, IMDb, and Sarcasm, the LLMs suddenly understand the tasks at intermediate layers. 
-          2) For CommonClaim and HateEval, the LLMs have already understood the tasks in shallower layers. 
-          3) For Counterfact, StrategyQA, and Coinflip, The tasks are more difficult to understand compared with others. Therefore, we consider the tasks in type 1 and 2 easy tasks, and those in type 3 are complex. 
-        </p>
-        
-        <p><b>RQ2: Do different size LLMs in the same family <i>(e.g., the LLaMA family)</i> have consistent Concept Depth?</b></p>
-
-        <p>
-          We have two observations by comparing different sizes of models from the same LLM family. 1) As the number of parameters increases, peak accuracy gradually increases, and the converging point gradually advances. 2) Larger models grasp the concepts earlier and better.
-        </p>
-        
         <p><b>RQ3: Do LLMs' Concept Depth of the same size behave consistently?</b></p>
         <p>
           With the same number of model parameters, the models generally have a comparable understanding of the datasets.
         </p>
         
+        
+      </div>
+    
+      <div class="image-body">
+        <div align=center>
+          <img src="./static/images/rq3.jpg" alt="CD Introduction" style="width: 70%;">
+          <div class="columns is-centered has-text-centered">
+            <div class="column is-three-fifths">
+              <h2 class="subtitle has-text-centered">
+                Linear probing accuracy of Gemma-7B, LLaMA-7B, Qwen-7B on nine datasets.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <br/><br/>
+      
+      <div class="content has-text-justified">
+
         <p><b>Ablation Study: How can quantization (lower model precision) and noises (examing the robustness) affect LLM's Concept Depths?</b></p>
         <p>
           Noises or 8-bit-quantization can cause the accuracy to converge more slowly. Compressing the LLMs to 16 bits doesn't harm the understanding process too much.
@@ -473,6 +501,7 @@ The layer-wise representations of LLMs are susceptible to noise and high-ratio q
         </p>
         
       </div>
+
     </div>
   </div>
 </section>
