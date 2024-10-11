@@ -32,7 +32,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="icon" href="./static/images/disk.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -188,6 +188,7 @@
   </div>
 </section>
 
+<!--
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -203,8 +204,8 @@
     </div>
   </div>
 </section>
-
-
+-->
+<!--
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
@@ -261,7 +262,22 @@
     </div>
   </div>
 </section>
+-->
 
+<section class="main image">
+  <div class="image-body">
+    <div align=center>
+      <img src="./static/images/Figure1.png" alt="CD Introduction" style="width: 50%;">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-three-fifths">
+          <h2 class="subtitle has-text-centered">
+            <span class="dnerf">Concept Depth</span> is used to analyze the comprehension ability of Large Language Models (LLM) and the difficulty of a concept's understanding. We use probing techniques🔍 on each layer's embedding to detect the layer accuracy, F1-score, and AUC of the classification task.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -270,39 +286,25 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+          <p>Large language models (LLMs) have shown remarkable performances across a wide range of tasks. However, the mechanisms by which these models encode tasks of varying complexities remain poorly understood. In this paper, we explore the hypothesis that LLMs process concepts of varying complexities in different layers, introducing the idea of "Concept Depth" to suggest that more complex concepts are typically acquired in deeper layers. </p>
+
+          <p>Specifically, we categorize concepts based on their level of abstraction, defining them in the order of increasing complexity within factual, emotional, and inferential tasks. We conduct extensive probing experiments using layer-wise representations across various LLM families (Gemma, LLaMA, Qwen) on various datasets spanning the three domains of tasks. </p>
+          
+          <p>Our findings reveal that models could efficiently conduct probing for simpler tasks in shallow layers, and more complex tasks typically necessitate deeper layers for accurate understanding. Additionally, we examine how external factors, such as adding noise to the input and quantizing the model weights, might affect layer-wise representations. Our findings suggest that these factors can impede the development of a conceptual understanding of LLMs until deeper layers are explored. </p>
+          
+          <p>We hope that our proposed concept and experimental insights will enhance the understanding of the mechanisms underlying LLMs. Our codes are available at 
+            <a href="https://github.com/Luckfort/CD">
+              <span>https://github.com/Luckfort/CD</span>.
+            </a>
           </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
-          </p>
+          
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
     <!-- Paper video. -->
+    <!--
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Video</h2>
@@ -311,7 +313,7 @@
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         </div>
       </div>
-    </div>
+    </div>-->
     <!--/ Paper video. -->
   </div>
 </section>
