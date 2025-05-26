@@ -1,6 +1,5 @@
 # Exploring Concept Depth: How Large Language Models Acquire Knowledge at Different Layers?
 
-This is the repository that contains source code for the [Explore Concept Depth](https://luckfort.github.io/explore_CD).
 
 
 Please cite our work:
