@@ -208,38 +208,31 @@
 
   <!--Main Body-->
 
-  <!-- Dataset Intro -->
-    
   <div class="columns is-centered has-text-centered">
-    <div class="column is-four-fifths">
-      <h2 class="title is-3">🗃️Dataset Information</h2>
-      
-      <div class="content has-text-justified">
-        <p align="center">
-          We use the following datasets in our experiments.
-        </p>
-        
-        <h4 class="title is-4" align="center">💡Fact</h4>
-        <p align="center">We let LLM solve true-of-false problems, based on an objective factual basis.</p>
-        <p align="center">🌆 <b>Cities</b>: Consists of statements about the location of cities and their veracity labels (e.g., The city of Zagreb is in Japan, which is wrong).</p>
-        <p align="center">🔎 <b>Common-Claim</b>: A dataset of boolean statements, each labeled by two humans as common-knowledge-true, common-knowledge-false, or neither.</p>
-        <p align="center">💥 <b>Counterfact</b>: Includes myriad counterfactuals that allows quantitative testing of specificity and generalization when learning a counterfactual.</p>
-        
-        <h4 class="title is-4" align="center">❤️Emotion</h4>
-        <p align="center">Given a social media or movie review, have the LLM solve a dichotomous sentiment problem.</p>
-        <p align="center">💢 <b>HateEval</b>: Has tweets which were annotated hierarchically.</p>
-        <p align="center">🎬 <b>STSA</b>: Includes movie reviews, wih positive and negative reviews, reflecting the writer's overall intention for this review. </p>
-        <p align="center">📽️ <b>IMDb</b>: A benchmark dataset for binary sentiment classification. We use 2000 of these samples.</p>
-        <p align="center">🤭 <b>Sarcasm</b>: A superior news headline dataset that tells if the headlines are sarcastic.</p>
+  <div class="column is-four-fifths">
+    <h2 class="title is-3">🔍 Key Findings</h2>
 
-        <h4 class="title is-4" align="center">🧠Reasoning</h4>
-        <p align="center">Examing LLM's reasoning skills for bi-classification.</p>
-        <p align="center">🗝️ <b>StrategyQA</b>: Contains questions across all knowledge domains to elicit creative and diverse yes/no questions that require implicit reasoning steps.</p>
-        <p align="center">🪙 <b>Coinflip</b>: Includes coin flipping queries, asking if a coin remains heads up after it is either flipped or left unflipped by individuals.</p>
-      </div>
+    <div class="content has-text-justified">
+      <p align="center">We highlight three core findings from our study of massive values in LLM attention mechanisms.</p>
+
+      <h4 class="title is-4" align="center">📊 Functional Role of Massive Values</h4>
+      <p align="center">
+        We conduct extensive experiments on ten datasets and show that massive values in <code>Q</code> and <code>K</code> matrices play a crucial role in contextual knowledge retrieval, while having limited effect on parametric knowledge.
+      </p>
+
+      <h4 class="title is-4" align="center">⚙️ Impact on Quantization</h4>
+      <p align="center">
+        We evaluate three quantization strategies and find that methods explicitly addressing massive values better preserve contextual understanding. This suggests the need for quantization-aware designs.
+      </p>
+
+      <h4 class="title is-4" align="center">⏱️ Temporal Origin Analysis</h4>
+      <p align="center">
+        Through causal and temporal analysis, we show that massive values originate from the RoPE mechanism and appear as early as the initial layers. This sheds light on how these values propagate through the model.
+      </p>
     </div>
   </div>
-  <!--/ Dataset Intro -->
+</div>
+
 
 
   <!-- Case Example -->
