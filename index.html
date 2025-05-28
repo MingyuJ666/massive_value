@@ -309,28 +309,29 @@
   </div>
 
       
-      <div class="content has-text-justified">
+  <div class="content has-text-justified">
+  <h5 class="title is-5" align="center">🧩 Why Do Concentrate Massive Values Appear — and Why Only in Q/K?</h5>
 
-        <p><b>RQ3: Do LLMs' Concept Depth of the same size behave consistently?</b></p>
-        <p>
-          With the same number of model parameters, the models generally have a comparable understanding of the datasets.
-        </p>
-        
-        
-      </div>
-    
-      <div class="image-body">
-        <div align=center>
-          <img src="./static/images/Fig5.png" alt="CD Introduction" style="width: 70%;">
-          <div class="columns is-centered has-text-centered">
-            <div class="column is-three-fifths">
-              <h2 class="subtitle has-text-centered">
-                Linear probing accuracy of Gemma-7B, LLaMA-7B, Qwen-7B on nine datasets.
-              </h2>
-            </div>
-          </div>
-        </div>
-      </div>
+  <p>
+    We find that <b>Rotary Position Embedding (RoPE)</b> is the root cause of the emergence of <b>concentrated massive values</b> in large language models.
+  </p>
+
+  <p>
+    RoPE is selectively applied <b>only</b> to the <b>Query (Q)</b> and <b>Key (K)</b> matrices, but <b>not</b> to the <b>Value (V)</b>. This asymmetric design causes extreme activations to appear <b>exclusively in Q and K</b>, while V remains smooth and unstructured.
+  </p>
+
+  <p>
+    We verify this across a wide range of LLMs. All RoPE-based models (e.g., LLaMA, Qwen, Gemma, Qwen-VL, LLaVA) show clear <b>massive value concentrations</b> in Q/K. In contrast, models without RoPE (like OPT, GPT2, and Jamba) <i>show no such patterns</i>.
+  </p>
+
+  <p>
+    In a controlled comparison, <b>GPT2-NEO vs GPT2-NEOX</b> (only differing by RoPE) confirms this: <i>only GPT2-NEOX exhibits massive values</i>. Even when using enhanced RoPE like M-RoPE in Qwen2-VL, the effect persists.
+  </p>
+
+  <p>
+    <i>These findings confirm that RoPE is both necessary and sufficient to induce concentrated massive values in Q/K, a phenomenon absent in models using other position encoding strategies.</i>
+  </p>
+</div>
       
       <br/><br/>
 
