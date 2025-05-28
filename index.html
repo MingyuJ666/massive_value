@@ -120,7 +120,7 @@
                 <a href="https://arxiv.org/pdf/2502.01563"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <img src="./static/images/icml.png" alt="Accepted by ICML" style="width: 45px; height: 16px;"> <!-- 修改图片高度 -->
+                      <img src="./static/images/icml.png" alt="Accepted by ICML" style="width: 40px; height: 16px;"> <!-- 修改图片高度 -->
                   </span>
                   <span>Paper</span>
                 </a>
@@ -135,16 +135,7 @@
                   <span>Code</span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <!--<span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
-              </span>-->
+              
             </div>
 
           </div>
@@ -167,11 +158,11 @@
 
   <div class="image-body">
     <div align=center>
-      <img src="./static/images/Figure1.png" alt="Introduction" style="width: 40%;">
+      <img src="./static/images/Figure1.png" alt="Introduction" style="width: 37%;">
       <div class="columns is-centered has-text-centered">
         <div class="column is-three-fifths">
           <h2 class="subtitle has-text-centered">
-            <span class="dnerf">In transformer-based Large Language Models with RoPE(like Llama, Gemma), the attention queries (Q) and keys (K) exhibit concentrated <b>massive values<b> in certain dimensions.
+            <span class="dnerf">In transformer-based Large Language Models with RoPE(like Llama, Gemma), the attention queries (Q) and keys (K) exhibit concentrated massive values in certain dimensions.
           </h2>
         </div>
       </div>
@@ -182,7 +173,7 @@
 
   <div class="image-body">
     <div align=center>
-      <img src="./static/images/Figure2.png" alt="Introduction" style="width: 50%;">
+      <img src="./static/images/Figure2.png" alt="Introduction" style="width: 55%;">
       <div class="columns is-centered has-text-centered">
         <div class="column is-three-fifths">
           <h2 class="subtitle has-text-centered">
@@ -201,15 +192,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>Large language models (LLMs) have shown remarkable performances across a wide range of tasks. However, the mechanisms by which these models encode tasks of varying complexities remain poorly understood. In this paper, we explore the hypothesis that LLMs process concepts of varying complexities in different layers, introducing the idea of "<span class="dnerf">Concept Depth</span>" to suggest that more complex concepts are typically acquired in deeper layers. </p>
-
-          <p>Specifically, we categorize concepts based on their level of abstraction, defining them in the order of increasing complexity within factual, emotional, and inferential tasks. We conduct extensive probing experiments using layer-wise representations across various LLM families (Gemma, LLaMA, Qwen) on various datasets spanning the three domains of tasks. </p>
-          
-          <p>Our findings reveal that models could efficiently conduct probing for simpler tasks in shallow layers, and more complex tasks typically necessitate deeper layers for accurate understanding. Additionally, we examine how external factors, such as adding noise to the input and quantizing the model weights, might affect layer-wise representations. Our findings suggest that these factors can impede the development of a conceptual understanding of LLMs until deeper layers are explored. </p>
-          
-          <p>We hope that our proposed concept and experimental insights will enhance the understanding of the mechanisms underlying LLMs. Our codes are available at 
-            <a href="https://github.com/Luckfort/CD">
-              <span>https://github.com/Luckfort/CD</span>.
+          Large language models (LLMs) have achieved remarkable success in contextual knowledge understanding. In this paper, we show for the first time that these concentrated massive values consistently emerge in specific regions of attention queries (Q) and keys (K) while not having such patterns in values (V) in various modern transformer-based LLMs. Through extensive experiments, we further demonstrate that these massive values play a critical role in interpreting contextual knowledge (i.e., knowledge obtained from the current context window) rather than in retrieving parametric knowledge stored within the model’s parameters. Our further investigation of quantization strategies reveals that ignoring these massive values leads to a pronounced drop in performance on tasks requiring rich contextual understanding, aligning with our analysis. Finally, we trace the emergence of concentrated massive values and find that such concentration is caused by Rotary Positional Encoding (RoPE) and it appears since very first layers. These findings shed new light on how Q and K operate in LLMs and offer practical insights for model design and optimization. 
             </a>
           </p>
           
