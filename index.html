@@ -279,23 +279,29 @@
 
   <br /> <br />
   
-  <div class="content has-text-justified">
-        
-    <p><b>RQ2: Do different size LLMs in the same family <i>(e.g., the LLaMA family)</i> have consistent Concept Depth?</b></p>
+ <div class="content has-text-justified">
+  <h5 class="title is-5" align="center">📉 Massive Values & Quantization</h5>
 
-    <p>
-      We have two observations by comparing different sizes of models from the same LLM family. 1) As the number of parameters increases, peak accuracy gradually increases, and the converging point gradually advances. 2) Larger models grasp the concepts earlier and better.
-    </p>
-    
-  </div>
+  <p>
+    We evaluate three quantization methods — <b>AWQ</b>, <b>SmoothQuant</b>, and <b>GPTQ</b> — to test how well they preserve <i>massive values</i>.
+  </p>
+
+  <p>
+    AWQ and SmoothQuant explicitly preserve massive values and maintain strong performance across all tasks. In contrast, GPTQ, which doesn’t, suffers major accuracy drops on reasoning tasks like GSM8K and AQUA.
+  </p>
+
+  <p>
+    This gap confirms that <b>preserving massive values is key to contextual understanding</b>. Without it, models struggle in complex reasoning.
+  </p>
+</div>
       
   <div class="image-body">
     <div align=center>
-      <img src="./static/images/peak.png" alt="CD Introduction" style="width: 100%;">
+      <img src="./static/images/Fig4.png" alt="CD Introduction" style="width: 100%;">
       <div class="columns is-centered has-text-centered">
         <div class="column is-three-fifths">
           <h2 class="subtitle has-text-centered">
-            The peak accuracy of each dataset on Gemma, LLaMA, and Qwen represented by the percent depth proportion.
+            <h4 class="title is-6" align="center"> Impacts of different quantization methods on Llama3-8b across different benchmarks.
           </h2>
         </div>
       </div>
