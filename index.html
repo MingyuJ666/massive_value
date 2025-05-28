@@ -120,7 +120,7 @@
                 <a href="https://arxiv.org/pdf/2502.01563"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <img src="./static/images/icml.png" alt="Accepted by ICML" style="width: 32px; height: 16px;"> <!-- 修改图片高度 -->
+                      <img src="./static/images/icml.png" alt="Accepted by ICML" style="width: 45px; height: 16px;"> <!-- 修改图片高度 -->
                   </span>
                   <span>Paper</span>
                 </a>
@@ -167,11 +167,11 @@
 
   <div class="image-body">
     <div align=center>
-      <img src="./static/images/Figure1.png" alt="CD Introduction" style="width: 50%;">
+      <img src="./static/images/Figure1.png" alt="Introduction" style="width: 40%;">
       <div class="columns is-centered has-text-centered">
         <div class="column is-three-fifths">
           <h2 class="subtitle has-text-centered">
-            <span class="dnerf">Concept Depth</span> is used to analyze the comprehension ability of Large Language Models (LLM) and the difficulty of a concept's understanding. We use probing techniques🔍 on each layer's embedding to detect the layer accuracy, F1-score, and AUC of the classification task.
+            <span class="dnerf">In transformer-based Large Language Models with RoPE(like Llama, Gemma), the attention queries (Q) and keys (K) exhibit concentrated <b>massive values<b> in certain dimensions.
           </h2>
         </div>
       </div>
@@ -182,11 +182,11 @@
 
   <div class="image-body">
     <div align=center>
-      <img src="./static/images/Figure2.png" alt="CD Introduction" style="width: 50%;">
+      <img src="./static/images/Figure2.png" alt="Introduction" style="width: 50%;">
       <div class="columns is-centered has-text-centered">
         <div class="column is-three-fifths">
           <h2 class="subtitle has-text-centered">
-            The LLMs are trying to understand easy tasks and complex tasks. The more complex the task, the deeper layers an LLM needs to understand. The stronger the LLM is, the more complex the task level it can learn.
+            Q and K Embedding Vector in Llama-2-7B, we choose Layer 10 and 20. This visualization shown here is a two-dimensional image because we averaged over the sequence-length dimension. The horizontal axis is the number of heads, and the vertical axis is head dim. We can see that the massive value is concentrated at the bottom of the picture.
           </h2>
         </div>
       </div>
