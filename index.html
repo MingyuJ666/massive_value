@@ -468,13 +468,7 @@ The layer-wise representations of LLMs are susceptible to noise and high-ratio q
       <div class="column is-four-fifths">
         <h2 class="title is-3">Conclusion</h2>
         <div class="content has-text-justified">
-          <p>This paper proposes <span class="dnerf">Concept Depth</span>, the phenomenon that different concepts are learned in different layers of LLMs, i.e., more difficult concepts are fully acquired with deeper layers.</p>
-
-          <p>We conducted several experiments around <span class="dnerf">Concept Depth</span> using probe techniques. Our research suggests that LLMs tend to effectively categorize easy tasks, indicating that these concepts are learned in the first few initial layers. </p>
-          
-          <p>In contrast, complex tasks may only be recognizable (if at all) in deeper layers, and LLMs of the same size perform largely consistently across datasets regarding Concept Depth. </p>
-          
-          <p>Compressing the model weight to 16-bit representations for future LLMs' designs is also a promising method for saving computation memory.</p>
+          Our study provides novel insights into the role and origin of massive values in Large Language Models (LLMs). Through systematic investigation, we find that massive values are critical in contextual knowledge understanding tasks, such as passkey retrieval and IMDB sentiment understanding. In contrast, their influence on parametric knowledge retrieval tasks, such as world knowledge retrieval, is limited. This finding emphasizes the importance of preserving massive value to maintain model performance in reasoning and context-dependent tasks. Our investigation reveals that RoPE induces massive value stripes, distinct patterns exclusively in the Q and K, while absent in models without RoPE, such as OPT. This highlights how positional encoding mechanisms contribute to massive values, particularly low-frequency channel dimensions, offering new insights into RoPE's role in LLMs. This study establishes a deeper understanding of massive values in LLMs, their critical role in contextual knowledge understanding, their implications for model optimization techniques such as quantization, and their connection to RoPE-induced patterns. These findings lay the foundation for developing more robust, efficient, and interpretable LLM architectures and optimization strategies.
           
         </div>
       </div>
